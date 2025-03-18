@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Video</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .video-container {
+            text-align: center;
+            max-width: 80%;
+            width: 600px;
+        }
+        video {
+            width: 100%;
+            border-radius: 10px;
+            background: black;
+        }
+        .error-msg {
+            display: none;
+            color: red;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-container">
+        <video id="testVideo" autoplay loop muted playsinline controls>
+            <source src="video/pin1.mp4" type="video/mp4">
+            <source src="videos/test.webm" type="video/webm">
+            <source src="videos/test.ogv" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+        <p class="error-msg" id="errorMsg">⚠️ Video failed to load. Check the console for details.</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let video = document.getElementById("testVideo");
+            let errorMsg = document.getElementById("errorMsg");
+
+            video.onerror = function() {
+                console.error("🚨 Video failed to load. Possible reasons:");
+                console.error("1️⃣ File is missing or incorrect path.");
+                console.error("2️⃣ Wrong file format (try another format).");
+                console.error("3️⃣ Browser doesn't support the codec.");
+                errorMsg.style.display = "block";
+            };
+        });
+    </script>
+
+</body>
+</html>
