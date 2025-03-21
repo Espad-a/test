@@ -220,8 +220,7 @@
         h.defaults = {}, a.removeCookie = function(b, c) { return void 0 === a.cookie(b) ? !1 : (a.cookie(b, "", a.extend({}, c, { expires: -1 })), !a.cookie(b)) }
     });
 
-    var customizerHtml = '<div class="customizer-wrap"> <button class="customizer-toggle"><i class="fa fa-cog"></i></button><div class="customizer-inner"> <h4>Chose Color</h4><ul class="color-setting"> <li data-color="default" style="background-color: #212121"></li><li data-color="color-var-1" style="background-color: #E65B1C"></li><li data-color="color-var-2" style="background-color: #f15445"></li><li data-color="color-var-3" style="background-color: #51becd"></li><li data-color="color-var-4" style="background-color: #e59701"></li></ul></div></div>'
-    $('body').prepend(customizerHtml);
+    
 
     $('.customizer-toggle').on('click', function() {
         $(this).parents('.customizer-wrap').toggleClass('open');
