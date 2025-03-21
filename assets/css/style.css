@@ -124,7 +124,7 @@ img {
     - Common Classes
 -----------------------------------------*/
 .fix {
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hidden {
@@ -235,7 +235,7 @@ textarea:-ms-input-placeholder {
   height: 0;
   max-width: 100%;
   visibility: hidden;
-  overflow: hidden;
+  overflow: visible;
   opacity: 0;
 }
 .tab-content .tab-pane.active {
@@ -2001,7 +2001,7 @@ nav.side-menu > ul > li:last-child {
   line-height: 26px;
 }
 .portfolio-details-content .project-nav {
-  overflow: hidden;
+  overflow: visible;
   margin-top: 35px;
   border-top: 1px solid #eeeeee;
   padding-top: 20px;
